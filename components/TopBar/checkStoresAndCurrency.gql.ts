@@ -6,5 +6,11 @@ export default `
     currency {
       available_currency_codes
     }
+    getTopMegaMenuByGroupTitle {
+      title
+      link
+      target
+      class
+      }
   }
 `;

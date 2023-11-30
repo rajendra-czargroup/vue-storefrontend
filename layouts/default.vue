@@ -10,6 +10,7 @@
     <LazyHydrate when-visible>
       <Notification />
     </LazyHydrate>
+    <TopMenu class="desktop-only" />
     <TopBar class="desktop-only" />
     <AppHeader />
     <div id="layout">
@@ -30,6 +31,7 @@ import BottomNavigation from '~/components/BottomNavigation.vue';
 import IconSprite from '~/components/General/IconSprite.vue';
 import LoadWhenVisible from '~/components/utils/LoadWhenVisible.vue';
 import TopBar from '~/components/TopBar/TopBar.vue';
+import TopMenu from '~/components/TopBar/TopMenu.vue';
 
 export default defineComponent({
   name: 'DefaultLayout',
@@ -41,6 +43,7 @@ export default defineComponent({
     BottomNavigation,
     IconSprite,
     TopBar,
+    TopMenu,
     AppFooter: () => import(/* webpackPrefetch: true */ '~/components/AppFooter.vue'),
     CartSidebar: () => import(/* webpackPrefetch: true */ '~/modules/checkout/components/CartSidebar.vue'),
     WishlistSidebar: () => import(/* webpackPrefetch: true */ '~/modules/wishlist/components/WishlistSidebar.vue'),
