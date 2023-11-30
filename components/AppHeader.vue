@@ -7,9 +7,9 @@
       <template #logo>
         <HeaderLogo />
       </template>
-      <template #navigation>
+      <!-- <template #navigation>
         <HeaderNavigation :category-tree="categoryTree" />
-      </template>
+      </template> -->
       <template #aside>
         <div class="sf-header__switchers">
           <CurrencySelector

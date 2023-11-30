@@ -11,7 +11,7 @@
       <Notification />
     </LazyHydrate>
     <TopMenu class="desktop-only" />
-    <TopBar class="desktop-only" />
+    <!-- <TopBar class="desktop-only" /> -->
     <AppHeader />
     <div id="layout">
       <nuxt :key="route.fullPath" />
