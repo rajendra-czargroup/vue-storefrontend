@@ -240,4 +240,7 @@ export default defineComponent({
   bottom: 40%;
   left: 40%;
 }
+a.sf-link.sf-header-navigation-item__link.nav-item {
+    text-transform: unset !important;
+}
 </style>

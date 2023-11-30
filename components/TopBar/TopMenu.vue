@@ -35,12 +35,12 @@ export default defineComponent({
 <style lang="scss" scoped>
 .topmenu {
   width: 100%;
-  background-color: #000;
+  background-color: #666666;
   text-align: center;
   a{
     display: inline-block;
     padding: 10px 20px;
-    color: #fff;
+    color: #eeeee6;
     font-size: 16px;
   }
 }

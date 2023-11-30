@@ -135,4 +135,14 @@ export default defineComponent({
     display: none;
   }
 }
+.sf-header-navigation-item__item.sf-header-navigation-item__item--desktop{
+    background-color: #666666;
+}
+a.sf-link.sf-header-navigation-item__link.nav-item {
+    color: #eeeee6;
+    text-transform: none;
+}
+a.sf-link.sf-header-navigation-item__link.nav-item {
+    padding: 10px 0px 10px 0px;
+}
 </style>
