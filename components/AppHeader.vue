@@ -243,4 +243,12 @@ export default defineComponent({
 a.sf-link.sf-header-navigation-item__link.nav-item {
     text-transform: unset !important;
 }
+img.sf-image.sf-image-loaded {
+    height: auto;
+}
+.sf-input.sf-search-bar.sf-header__search {
+   flex: auto;
+   height: 70px;
+   border: solid 1px #666;
+}
 </style>
