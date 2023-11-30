@@ -8,7 +8,7 @@ export const StoreConfigQuery = `
         default_display_currency_code,
         locale,
         header_logo_src,
-        base_media_url
+        base_media_url,
         logo_width,
         logo_height,
         logo_alt

@@ -13,6 +13,7 @@
     <TopMenu class="desktop-only" />
     <!-- <TopBar class="desktop-only" /> -->
     <AppHeader />
+    <MainNavigation class="desktop-only" />
     <div id="layout">
       <nuxt :key="route.fullPath" />
     </div>
@@ -32,6 +33,7 @@ import IconSprite from '~/components/General/IconSprite.vue';
 import LoadWhenVisible from '~/components/utils/LoadWhenVisible.vue';
 import TopBar from '~/components/TopBar/TopBar.vue';
 import TopMenu from '~/components/TopBar/TopMenu.vue';
+import MainNavigation from '~/components/TopBar/MainNavigation.vue';
 
 export default defineComponent({
   name: 'DefaultLayout',
@@ -44,6 +46,7 @@ export default defineComponent({
     IconSprite,
     TopBar,
     TopMenu,
+    MainNavigation,
     AppFooter: () => import(/* webpackPrefetch: true */ '~/components/AppFooter.vue'),
     CartSidebar: () => import(/* webpackPrefetch: true */ '~/modules/checkout/components/CartSidebar.vue'),
     WishlistSidebar: () => import(/* webpackPrefetch: true */ '~/modules/wishlist/components/WishlistSidebar.vue'),

@@ -122,8 +122,8 @@ import {
   onMounted,
   useFetch,
 } from '@nuxtjs/composition-api';
-import HeaderNavigation from '~/components/Header/Navigation/HeaderNavigation.vue';
-import { useCategory } from '~/modules/catalog/category/composables/useCategory';
+//import HeaderNavigation from '~/components/Header/Navigation/HeaderNavigation.vue';
+//import { useCategory } from '~/modules/catalog/category/composables/useCategory';
 import {
   useUiHelpers,
   useUiState,
@@ -139,7 +139,7 @@ import { useTopBar } from './TopBar/useTopBar';
 
 export default defineComponent({
   components: {
-    HeaderNavigation,
+   // HeaderNavigation,
     SfHeader,
     SfOverlay,
     HeaderLogo,
@@ -161,7 +161,7 @@ export default defineComponent({
     const { isAuthenticated } = useUser();
     const { loadTotalQty: loadCartTotalQty, cart } = useCart();
     const { loadItemsCount: loadWishlistItemsCount } = useWishlist();
-    const { categories: categoryList, load: categoriesListLoad } = useCategory();
+    // const { categories: categoryList, load: categoriesListLoad } = useCategory();
 
     const { hasCurrencyToSelect, hasStoresToSelect } = useTopBar();
 
@@ -173,7 +173,7 @@ export default defineComponent({
 
     const wishlistHasProducts = computed(() => wishlistItemsQty.value > 0);
     const accountIcon = computed(() => (isAuthenticated.value ? 'profile_fill' : 'profile'));
-    const categoryTree = ref<CategoryTree[]>([]);
+   // const categoryTree = ref<CategoryTree[]>([]);
 
     const handleAccountClick = async () => {
       if (isAuthenticated.value) {
@@ -183,12 +183,12 @@ export default defineComponent({
       }
     };
 
-    useFetch(async () => {
-      await categoriesListLoad({ pageSize: 20 });
+    // useFetch(async () => {
+    //   await categoriesListLoad({ pageSize: 20 });
 
-      categoryTree.value = categoryList.value?.[0]?.children
-        .filter((category) => category.include_in_menu);
-    });
+    //   categoryTree.value = categoryList.value?.[0]?.children
+    //     .filter((category) => category.include_in_menu);
+    // });
 
     onMounted(async () => {
       if (app.$device.isDesktop) {
@@ -201,7 +201,7 @@ export default defineComponent({
     return {
       accountIcon,
       cartTotalItems: computed(() => cart.value?.total_quantity ?? 0),
-      categoryTree,
+     // categoryTree,
       getCatLink,
       handleAccountClick,
       isAuthenticated,

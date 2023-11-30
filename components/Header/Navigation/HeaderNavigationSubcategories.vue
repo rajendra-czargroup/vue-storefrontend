@@ -187,7 +187,7 @@ export default defineComponent({
     left: 0;
     padding: 30px;
     right: 0;
-    top: 90px;
+    top: 225px;
     flex-wrap: wrap;
     justify-content: center;
     display: flex;
